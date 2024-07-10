@@ -1,13 +1,15 @@
 @import '../../assets/styles/color.css';
 
 nav {
-    border-bottom: 3px solid var(--secondary-color);
-    padding: 18px 95px 18px 95px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding: 18px 95px;
+    max-height: 100px;
+    overflow: hidden;
+    background-color: var(--primary-color);
 }
 
 .navbar-container {
     display: flex;
-    background-color: var(--primary-color);
     justify-content: space-between;
     align-items: center;
 }
@@ -15,6 +17,7 @@ nav {
 .navbar-container img {
     width: 112px;
     height: auto;
+    max-height: 63.86px;
 }
 
 nav div ul {
@@ -23,13 +26,19 @@ nav div ul {
     padding: 0;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .nav-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    transform: scale(1.3);
 }
 
 .nav-item li {
